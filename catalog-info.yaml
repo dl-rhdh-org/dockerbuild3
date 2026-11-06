@@ -1,0 +1,25 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: dockerbuild3
+  description: Minimal Dockerfile demo — build on OpenShift, push to Quay
+  tags:
+    - dockerfile
+    - python
+  annotations:
+    github.com/project-slug: dl-rhdh-org/dockerbuild3
+    # Quay UI link for humans; RHDH Image Registry tab still points at public quay.io until proxy flip
+    quay.io/repository-slug: demo/dockerbuild3
+  links:
+    - url: https://demo-quay-quay.apps.cluster-ldkv4.dyn.redhatworkshops.io/repository/demo/dockerbuild3
+      title: Quay repository
+      icon: catalog
+    - url: https://console-openshift-console.apps.cluster-ldkv4.dyn.redhatworkshops.io/k8s/ns/quay-builds/buildconfigs/dockerbuild3
+      title: OpenShift BuildConfig
+    - url: https://devspaces.apps.cluster-ldkv4.dyn.redhatworkshops.io/#https://github.com/dl-rhdh-org/dockerbuild3
+      title: Open in Dev Spaces
+      icon: catalog
+spec:
+  type: website
+  lifecycle: experimental
+  owner: user:guest
